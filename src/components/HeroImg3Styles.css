@@ -1,43 +1,62 @@
-.hero-img3 {
+.mask3 {
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
     height: 100vh;
     position: relative;
 }
 
-.hero-img3::before {
-    content: "";
-    background: url("https://images.unsplash.com/photo-1623658776445-7315eaae2b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80");
-    background-size: cover;
-    background-position: center top;
-    height: 100%;
+.about-img {
     width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.mask3::after {
+    content: "";
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1 ;
+    background-color: black;
+    opacity: 0.6;
 }
 
-.heading {
-    width: 100%;
+.hero3 {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
-.hero-img3 h1 {
-    font-size: 2.4rem;
-}
-
-.hero-img3 p {
-    font-size: 1.4rem;
+.hero3 .content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
     text-align: center;
 }
 
-@media  (max-width: 640px) {
-    .hero-img3 h1 {
-        font-size: 2rem;
+.hero3 .content h1{
+    font-size: 3rem;
+    padding: 0.8rem 0 2rem;
+}
+
+.hero3 .content p{
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+.content .btn {
+    margin: 1rem 0.2rem;
+}
+
+@media screen and (max-width:640px) {
+    .hero3 .content h1{
+        font-size: 2.5rem;
+    }
+
+    .hero3 .content p{
+        font-size: 1rem;
     }
 }
